@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Portfolio Ingénieure</title>
+    <link rel="stylesheet" type="text/css" href="../css/style_projects.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">PORTFOLIO 2025</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À Propos</a></li>
+                <li><a href="projects.html" class="active">Projets</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="container">
+        <div class="projects-header fade-in">
+            <h1>Mes Projets</h1>
+            <p>Découvrez mes créations technologiques qui repoussent les limites de l'innovation</p>
+        </div>
+
+        <!-- Filtres -->
+        <div class="project-filters fade-in">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="ai">Intelligence Artificielle</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="data">Data Science</button>
+        </div>
+
+        <!-- Grille des projets -->
+        <div class="projects-grid fade-in">
+            <!-- Projet 1 -->
+            <div class="project-card show" data-category="ai">
+                <div class="project-image">🤖</div>
+                <div class="project-content">
+                    <h3 class="project-title">Assistant IA Conversationnel</h3>
+                    <p class="project-description">Développement d'un chatbot intelligent utilisant le deep learning pour comprendre et répondre aux questions complexes des utilisateurs.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Flask</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" onclick="openModal('modal1')">Détails</a>
+                        <a href="#" class="project-link secondary">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 2 -->
+            <div class="project-card show" data-category="web">
+                <div class="project-image">🌐</div>
+                <div class="project-content">
+                    <h3 class="project-title">Plateforme E-commerce Futuriste</h3>
+                    <p class="project-description">Application web complète avec interface utilisateur immersive, système de paiement intégré et recommandations personnalisées.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Stripe</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" onclick="openModal('modal2')">Détails</a>
+                        <a href="#" class="project-link secondary">Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 3 -->
+            <div class="project-card show" data-category="data">
+                <div class="project-image">📊</div>
+                <div class="project-content">
+                    <h3 class="project-title">Analyse Prédictive Smart City</h3>
+                    <p class="project-description">Système d'analyse de données urbaines pour prédire les flux de circulation et optimiser la gestion des ressources urbaines.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" onclick="openModal('modal3')">Détails</a>
+                        <a href="#" class="project-link secondary">Rapport</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 4 -->
+            <div class="project-card show" data-category="mobile">
+                <div class="project-image">📱</div>
+                <div class="project-content">
+                    <h3 class="project-title">App Réalité Augmentée</h3>
+                    <p class="project-description">Application mobile innovante utilisant la réalité augmentée pour l'apprentissage interactif des sciences et technologies.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">ARCore</span>
+                        <span class="tech-tag">Three.js</span>
+                        <span class="tech-tag">Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" onclick="openModal('modal4')">Détails</a>
+                        <a href="#" class="project-link secondary">Store</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 5 -->
+            <div class="project-card show" data-category="ai">
+                <div class="project-image">👁️</div>
+                <div class="project-content">
+                    <h3 class="project-title">Reconnaissance Visuelle IA</h3>
+                    <p class="project-description">Système de vision par ordinateur capable de détecter et classifier des objets en temps réel avec une précision exceptionnelle.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">YOLO</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" onclick="openModal('modal5')">Détails</a>
+                        <a href="#" class="project-link secondary">Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 6 -->
+            <div class="project-card show" data-category="web">
+                <div class="project-image">⚡</div>
+                <div class="project-content">
+                    <h3 class="project-title">Dashboard IoT Temps Réel</h3>
+                    <p class="project-description">Interface web moderne pour la visualisation et le contrôle de capteurs IoT avec mises à jour en temps réel et alertes intelligentes.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">WebSocket</span>
+                        <span class="tech-tag">D3.js</span>
+                        <span class="tech-tag">MQTT</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link" onclick="openModal('modal6')">Détails</a>
+                        <a href="#" class="project-link secondary">Live</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modals pour détails -->
+    <div class="modal" id="modal1">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal1')">&times;</button>
+            <h2>Assistant IA Conversationnel</h2>
+            <p>Ce projet ambitieux vise à créer un assistant virtuel intelligent capable de comprendre et de répondre à des questions complexes dans divers domaines. L'assistant utilise des techniques avancées de traitement du langage naturel (NLP) et d'apprentissage profond.</p>
+            <p><strong>Fonctionnalités principales :</strong></p>
+            <p>• Compréhension contextuelle des conversations<br>
+            • Réponses personnalisées selon le profil utilisateur<br>
+            • Apprentissage continu à partir des interactions<br>
+            • Interface vocale et textuelle<br>
+            • Intégration avec APIs externes</p>
+            <p><strong>Défis techniques relevés :</strong> Optimisation des modèles pour des réponses rapides, gestion des conversations multi-tours, et fine-tuning des modèles pré-entraînés.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal2')">&times;</button>
+            <h2>Plateforme E-commerce Futuriste</h2>
+            <p>Une expérience d'achat révolutionnaire combinant design futuriste et fonctionnalités avancées. Cette plateforme repense complètement l'expérience utilisateur du commerce en ligne.</p>
+            <p><strong>Innovations clés :</strong></p>
+            <p>• Interface 3D interactive pour l'exploration produits<br>
+            • Recommandations IA basées sur le comportement<br>
+            • Réalité augmentée pour essayage virtuel<br>
+            • Système de paiement blockchain intégré<br>
+            • Analytics en temps réel pour les vendeurs</p>
+            <p><strong>Architecture :</strong> Microservices scalables, base de données distribuée, CDN global pour des performances optimales sur tous les continents.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal3')">&times;</button>
+            <h2>Analyse Prédictive Smart City</h2>
+            <p>Projet de recherche appliquée visant à optimiser la gestion urbaine grâce à l'analyse prédictive. Le système traite des téraoctets de données urbaines pour anticiper les besoins de la ville.</p>
+            <p><strong>Domaines d'application :</strong></p>
+            <p>• Prédiction des embouteillages et optimisation des feux<br>
+            • Gestion préventive des infrastructures<br>
+            • Optimisation de la consommation énergétique<br>
+            • Prévision des pics de pollution<br>
+            • Planification des services publics</p>
+            <p><strong>Impact mesuré :</strong> Réduction de 23% du temps de trajet moyen et économies énergétiques de 18% lors des tests pilotes.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal4">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal4')">&times;</button>
+            <h2>App Réalité Augmentée</h2>
+            <p>Application mobile révolutionnaire transformant l'apprentissage scientifique grâce à la réalité augmentée. Les concepts abstraits deviennent tangibles et interactifs.</p>
+            <p><strong>Modules disponibles :</strong></p>
+            <p>• Chimie : visualisation 3D des molécules<br>
+            • Physique : simulation d'expériences dangereuses<br>
+            • Biologie : exploration du corps humain<br>
+            • Astronomie : système solaire à l'échelle<br>
+            • Mathématiques : géométrie dans l'espace</p>
+            <p><strong>Reconnaissance :</strong> Prix de l'innovation étudiante 2024, utilisée dans plus de 50 établissements scolaires pour les tests pilotes.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal5">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal5')">&times;</button>
+            <h2>Reconnaissance Visuelle IA</h2>
+            <p>Système de vision par ordinateur de pointe capable de traiter et analyser des flux vidéo en temps réel avec une précision industrielle.</p>
+            <p><strong>Capacités du système :</strong></p>
+            <p>• Détection de 1000+ catégories d'objets<br>
+            • Reconnaissance faciale avec respect de la vie privée<br>
+            • Analyse de comportements et d'anomalies<br>
+            • Suivi multi-objets dans des scènes complexes<br>
+            • Intégration avec systèmes de sécurité existants</p>
+            <p><strong>Performance :</strong> 95.7% de précision, traitement de 60 FPS en HD, déploiement sur edge computing pour la latence minimale.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal6">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('modal6')">&times;</button>
+            <h2>Dashboard IoT Temps Réel</h2>
+            <p>Interface de contrôle universelle pour écosystèmes IoT complexes. Centralise la gestion de milliers de capteurs et actuateurs avec une expérience utilisateur fluide.</p>
+            <p><strong>Fonctionnalités avancées :</strong></p>
+            <p>• Visualisations interactives en temps réel<br>
+            • Système d'alertes intelligent et configurable<br>
+            • Contrôle à distance sécurisé<br>
+            • Analytics prédictives sur les tendances<br>
+            • API REST complète pour intégrations tierces</p>
+            <p><strong>Scalabilité :</strong> Testé avec succès sur un réseau de 10,000+ capteurs simultanés, architecture cloud-native avec auto-scaling.</p>
+        </div>
+    </div>
+
+    <script src="../js/projects.js"></script>
+</body>
+</html>

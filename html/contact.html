@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Portfolio Ingénieure</title>
+    <link rel="stylesheet" type="text/css" href="../css/style_contact.css">
+  
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">PORTFOLIO 2025</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À Propos</a></li>
+                <li><a href="projects.html">Projets</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main class="container">
+        <div class="contact-header fade-in">
+            <h1>Contactez-Moi</h1>
+            <p>Prête à collaborer sur des projets innovants qui façonneront l'avenir technologique</p>
+        </div>
+
+        <div class="contact-content fade-in">
+            <!-- Formulaire de contact -->
+            <div class="contact-form">
+                <h2>Envoyez-moi un message</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse e-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Décrivez votre projet ou votre demande..." required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Envoyer le message</button>
+                </form>
+            </div>
+
+            <!-- Informations de contact -->
+            <div class="contact-info">
+                <h2>Informations de contact</h2>
+                
+                <div class="info-card">
+                    <span class="icon">📧</span>
+                    <h3>E-mail</h3>
+                    <p><a href="hasszouma@gmail.com">contact@monportfolio.com</a></p>
+                    <p>Réponse garantie sous 24h</p>
+                </div>
+
+                <div class="info-card">
+                    <span class="icon">📱</span>
+                    <h3>Téléphone</h3>
+                    <p><a href="tel:++237697186897">+237 697 18 68 97</a></p>
+                    <p>Disponible du lundi au vendredi, 9h-17h</p>
+                </div>
+
+                <div class="info-card">
+                    <span class="icon">📍</span>
+                    <h3>Localisation</h3>
+                    <p>Yaoundé, Cameroun</p>
+                    <p>Ouverte à la mobilité nationale et internationale</p>
+                </div>
+
+                <div class="info-card">
+                    <span class="icon">🎓</span>
+                    <h3>Statut</h3>
+                    <p>Élève ingénieure</p>
+                    <p>Recherche stage, alternance ou premier emploi</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section réseaux sociaux -->
+        <div class="social-section fade-in">
+            <h2>Suivez-moi sur les réseaux</h2>
+            <div class="social-links">
+                <a href="linkedin.com/in/Zouheiriyya Hassana" class="social-link" title="LinkedIn">
+                    <span>💼</span>
+                </a>
+                <a href="https://github.com/ZouhiMhd" class="social-link" title="GitHub">
+                    <span>💻</span>
+                </a>
+                <!-- <a href="#" class="social-link" title="Twitter">
+                    <span>🐦</span>
+                </a> -->
+                <a href="https://www.instagram.com/zouheiriyya" class="social-link" title="Instagram">
+                    <span>📸</span>
+                </a>
+                <a href="#" class="social-link" title="Discord">
+                    <span>🎮</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Message de confirmation -->
+    <div class="success-message" id="successMessage">
+        Message envoyé avec succès ! Je vous répondrai bientôt.
+    </div>
+
+    <script src="../js/contact.js"></script>
+</body>
+</html>

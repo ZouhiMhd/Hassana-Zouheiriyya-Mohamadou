@@ -1,0 +1,334 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Orbitron', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a0033 50%, #000000 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* Particules animées en arrière-plan */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: #00ffff;
+            border-radius: 50%;
+            animation: float 6s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                opacity: 0;
+                transform: translateY(100vh) scale(0);
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-100px) scale(1);
+            }
+        }
+
+        /* Navigation futuriste */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #00ffff;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00ffff;
+            text-shadow: 0 0 20px #00ffff;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-links a:hover {
+            color: #00ffff;
+            border-color: #00ffff;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-links a:hover::before {
+            left: 100%;
+        }
+
+        /* Contenu principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff, 0 0 40px #00ffff;
+            }
+            to {
+                text-shadow: 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff;
+            }
+        }
+
+        .hero-content h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #cccccc;
+            font-weight: normal;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+            }
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.8);
+        }
+
+        /* Sections */
+        .section {
+            padding: 100px 0;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+        }
+
+        .section h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #00ffff;
+        }
+
+        /* Grille de compétences */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .skill-card {
+            background: rgba(0, 255, 255, 0.1);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+            border-radius: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .skill-card:hover::before {
+            opacity: 1;
+            animation: rotate 2s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 255, 255, 0.3);
+        }
+
+        .skill-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #00ffff;
+        }
+
+        /* Footer futuriste */
+        .footer {
+            text-align: center;
+            padding: 50px 0;
+            background: rgba(0, 0, 0, 0.8);
+            border-top: 2px solid #00ffff;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color: #00ffff;
+            border: 2px solid #00ffff;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: #00ffff;
+            color: #000;
+            box-shadow: 0 0 20px #00ffff;
+            transform: scale(1.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 20px;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content h2 {
+                font-size: 1.3rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation d'entrée */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
