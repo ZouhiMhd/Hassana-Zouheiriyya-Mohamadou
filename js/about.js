@@ -27,8 +27,18 @@
             skillBars.forEach(bar => observer.observe(bar));
         }
 
+        function burgerMenu() {
+            const burger = document.getElementById('burger');
+            const navLinks = document.getElementById('nav-links');
+
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('open');
+            });
+        }
         // Initialisation
         document.addEventListener('DOMContentLoaded', () => {
             animateOnScroll();
             animateSkillBars();
+            burgerMenu();
         });

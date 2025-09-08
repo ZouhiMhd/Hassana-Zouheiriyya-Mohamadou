@@ -53,10 +53,23 @@
             });
         }
 
+        // Menu burger
+        function burgerMenu() {
+            const burger = document.getElementById('burger');
+            const navLinks = document.getElementById('nav-links');
+
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('open');
+            });
+        }
+
         // Initialisation
         document.addEventListener('DOMContentLoaded', () => {
             createParticles();
             animateOnScroll();
             smoothScroll();
             parallaxEffect();
+            burgerMenu(); // activation du burger
+            
         });

@@ -61,6 +61,63 @@
             border-color: #00ffff;
             box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
         }
+        .nav-links a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -25%;
+            right: -25%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .nav-links a:hover::before {
+            left: 100%;
+        }
+        /* Bouton burger */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 6px;
+    z-index: 1100; /* au-dessus du menu */
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background: #00ffff;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Responsive - afficher burger et masquer menu horizontal */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        height: calc(100vh - 70px);
+        width: 200px;
+        background: rgba(0,0,0,0.95);
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        transition: right 0.3s ease-in-out;
+        padding-top: 50px;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+}
+
 
         /* Contenu principal */
         .container {
@@ -83,7 +140,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            animation: glow 2s ease-in-out infinite alternate;
+            animation: glow 4s ease-in-out infinite alternate;
         }
 
         @keyframes glow {
@@ -123,10 +180,10 @@
         .contact-form::before {
             content: '';
             position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
+            top: -50%;
+            left: -70%;
+            right: -70%;
+            bottom: -50%;
             background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00, #00ffff);
             border-radius: 20px;
             opacity: 0;
